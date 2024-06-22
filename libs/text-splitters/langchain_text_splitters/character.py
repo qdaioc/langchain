@@ -659,6 +659,26 @@ class RecursiveCharacterTextSplitter(TextSplitter):
                 " ",
                 "",
             ]
+        elif language == Language.SQL:
+            return [
+                "\nCREATE TABLE ",
+                "\nCREATE DATABASE "
+                "\nSELECT ",
+                "\nUPDATE ",
+                "\nUSE ",
+                "\nDROP DATABASE ",
+                "\nDROP TABLE ",
+                "\nDROP INDEX"
+                "\nDESC ",
+                "\nINSERT INTO",
+                "\nSET ",
+                "\nDELETE FROM ",
+                "\nCREATE UNIQUE INDEX ",
+                "\nALTER TABLE ",
+                "\nALTER DATABASE "
+                "\n",
+                ";\n"
+            ]
         elif language in Language._value2member_map_:
             raise ValueError(f"Language {language} is not implemented yet!")
         else:

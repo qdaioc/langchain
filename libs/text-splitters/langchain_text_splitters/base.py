@@ -294,6 +294,7 @@ class Language(str, Enum):
     PERL = "perl"
     HASKELL = "haskell"
     ELIXIR = "elixir"
+    SQL = "sql"
 
 
 @dataclass(frozen=True)
